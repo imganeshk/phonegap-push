@@ -66,7 +66,7 @@ var app = {
             var parentElement = document.getElementById('registration');
             var listeningElement = parentElement.querySelector('.waiting');
             var receivedElement = parentElement.querySelector('.received');
-            var codeElement = parentElement.querySelector('.code');
+            var codeElement = document.getElementById('code');
 
             codeElement.html(data.registrationId);
 
@@ -81,6 +81,7 @@ var app = {
 
         push.on('notification', function(data) {
             console.log('notification event');
+            alert(data.message);
             navigator.notification.alert(
                 data.message,         // message
                 null,                 // callback

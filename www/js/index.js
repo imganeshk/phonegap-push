@@ -40,16 +40,11 @@ var app = {
     setupPush: function() {
         console.log('calling push init');
         var push = PushNotification.init({
-            "android": {
-                "senderID": "XXXXXXXX"
-            },
-            "browser": {},
             "ios": {
                 "sound": true,
                 "vibration": true,
                 "badge": true
-            },
-            "windows": {}
+            }
         });
         console.log('after init');
 
@@ -74,6 +69,7 @@ var app = {
 
         push.on('error', function(e) {
             console.log("push error = " + e.message);
+            alert(e.message);
         });
 
         push.on('notification', function(data) {

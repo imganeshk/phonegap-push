@@ -66,10 +66,6 @@ var app = {
             var parentElement = document.getElementById('registration');
             var listeningElement = parentElement.querySelector('.waiting');
             var receivedElement = parentElement.querySelector('.received');
-            var codeElement = document.getElementById('code');
-
-            codeElement.html(data.registrationId);
-
             listeningElement.setAttribute('style', 'display:none;');
             receivedElement.setAttribute('style', 'display:block;');
         });
